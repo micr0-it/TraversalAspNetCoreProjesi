@@ -1,0 +1,36 @@
+﻿@model UserLoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+    <link href="~/Traversal-Liberty/login-page.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Kullanıcı Adınız" asp-for="UserName" />
+                <span asp-validation-for="UserName"></span>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Şifreniz" asp-for="Pwd" />
+                <span asp-validation-for="Pwd"></span>
+            </div>
+            <button type="submit" class="btn">Giriş Yap</button>
+            <div class="register-link">
+                <p>
+                    Giriş yapacak bir hesabınız yok mu? <a href="/Login/SignUp/">Kayıt olmayı deneyebilirsiniz!</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

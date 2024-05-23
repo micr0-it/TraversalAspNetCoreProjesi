@@ -1,0 +1,54 @@
+﻿@model UserRegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUp</title>
+    <link href="~/Traversal-Liberty/login-page.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <form method="post">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Kullanıcı Adınız"   asp-for="UserName"/> @*UserViewModel'deki property adlandırmaları ile name attribute'larına atanan adlandırmalar aynı olsun*@
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="İsminiz"  asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Soyisminiz"  asp-for="Surname" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="E-posta Adresiniz"  asp-for="Mail" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Şifreniz"  asp-for="Pwd" />
+                <span asp-validation-for="Pwd" class="text-danger"></span>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Şifrenizi Tekrar Giriniz"  asp-for="ConfirmPwd" />
+                <span asp-validation-for="ConfirmPwd" class="text-danger"></span>
+            </div>
+            <div class="text-danger" asp-validation-summary="ModelOnly">
+                @*Bu sayede şifre hata mesajlarını da görebileceğiz*@
+            </div>
+            <button type="submit" class="btn">Kayıt Ol</button>
+            <div class="register-link">
+                <p>
+                    Zaten kaydınız var mı? <a href="/Login/SignIn/">Giriş yapmayı deneyebilirsiniz!</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@model Reservation
+@{
+    ViewData["Title"] = "NewReservations";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<h1>NewReservations</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ReservationID" />
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label">Lokasyon</label>
+                @Html.DropDownListFor(x=>x.Destination, (List<SelectListItem>)ViewBag.Data, new{@class = "form-control"})
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="PersonCount" class="control-label">Kişi Sayısı</label>
+                <input type="text" asp-for="PersonCount" class="form-control" />
+                <span asp-validation-for="PersonCount" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="ReservationDate" class="control-label">Tarih</label>
+                <input type="date" asp-for="ReservationDate" class="form-control" />
+                <span asp-validation-for="ReservationDate" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Eklemek İstedikleriniz</label>
+                <input type="text" asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <button type="submit" value="Save" class="btn btn-primary">Rezervasyon Yap</button>
+            </div>
+        </form>
+    </div>
+</div>

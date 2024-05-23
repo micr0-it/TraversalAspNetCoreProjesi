@@ -1,0 +1,43 @@
+﻿@model List<Reservation>
+@{
+    ViewData["Title"] = "ApprovalReservations";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<h1>Onay Bekleyen Rezervasyonlar</h1>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Aktif Tur Rotaları</h4>
+            <p class="card-description">
+                Aktif Tur <span>Rotalarımız</span>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Lokasyon</th>
+                            <th>Kişi Sayısı</th>
+                            <th>Rezervasyon Tarihi</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ReservationID</td>
+                                @* <td>@item.Destination.City</td> // Core mimarisi öncesinde bu yazıma izin veriliyordu ve böylece şehir ismi alınıyordu fakat core ile bu değişti özel bir incldue metodu lazım, bunu da EntityFramework Katmanında yazdık*@
+                                <td>@item.Destination.City</td>
+                                <td>@item.PersonCount</td>
+                                <td>@item.ReservationDate</td>
+                                <td>@item.Description</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

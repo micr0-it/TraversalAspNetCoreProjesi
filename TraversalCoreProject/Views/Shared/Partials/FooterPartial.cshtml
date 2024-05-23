@@ -1,0 +1,99 @@
+﻿<footer>
+    <section class="w3l-footer">
+        <div class="w3l-footer-16-main py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 column">
+                        <div class="row">
+                            <div class="col-md-4 column">
+                                <h3>Şirket</h3>
+                                <ul class="footer-gd-16">
+                                    <li><a href="/Default/Index/">Anasayfa</a></li>
+                                    <li><a href="about.html">Hakkımızda</a></li>
+                                    <li><a href="services.html">Tur Hizmetlerimiz</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">İletişim</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 column mt-md-0 mt-4">
+                                <h3>Denemeye Değer Bağlantılar</h3>
+                                <ul class="footer-gd-16">
+                                    <li><a href="#url">Rotalarımız</a></li>
+                                    <li><a href="#url">Şubelerimiz</a></li>
+                                    <li><a href="#url">En Son Eklenenler</a></li>
+                                    <li><a href="about.html">Şirket hakkında</a></li>
+                                    <li><a href="#url">Dinlenme Tesisleri</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 column mt-md-0 mt-4">
+                                <h3>Tur Hizmetlerimiz İçin</h3>
+                                <ul class="footer-gd-16">
+                                    <li><a href="#url">Gizlilik Politikası</a></li>
+                                    <li><a href="#url">Hizmet Şartları</a></li>
+                                    <li><a href="services.html">Tur Hizmetlerimiz</a></li>
+                                    <li><a href="landing-single.html">Landing Page</a></li>
+                                    <li><a href="#url">Tur Rehberlerimiz</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5">
+                        <h3>Abone Olun ! </h3>
+                        <div class="end-column">
+                            <h4>Son haberlerden ve indirimli fırsatlardan yararlanmak için</h4>
+                            <form action="#" class="subscribe" method="post">
+                                <input type="email" name="email" placeholder="Email Address" required="">
+                                <button type="submit">Haydi!</button>
+                            </form>
+                            <p>Kayıt olmayı tercih ederseniz uygun fiyatlı hizmetlerimziden haberdar olabilirsiniz! </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+                    <div class="columns text-lg-left text-center">
+                        <p>
+                            &copy; 2020 Traversal. All rights reserved.Design by <a href="https://w3layouts.com/" target="_blank">
+
+                        </p>
+                    </div>
+                    <div class="columns-2 mt-lg-0 mt-3">
+                        <ul class="social">
+                            <li>
+                                <a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <script>
+            $(function () {
+                $('.navbar-toggler').click(function () {
+                    $('body').toggleClass('noscroll');
+                })
+            });
+        </script>
+    </section>
+</footer>
