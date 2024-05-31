@@ -48,7 +48,10 @@
         </div>
     </div>
 </div>
-@await Component.InvokeAsync("ProfileInfoList");
+<div class="col-md-6 d-flex align-items-stretch grid-margin stretch-card">
+    @await Component.InvokeAsync("ProfileInfoList")
+    @await Component.InvokeAsync("GuideList")
+</div>
 <div class="col-md-24 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">

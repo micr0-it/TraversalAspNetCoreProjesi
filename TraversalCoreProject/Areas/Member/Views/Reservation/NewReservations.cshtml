@@ -11,8 +11,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ReservationID" />
             <div class="form-group">
-                <label asp-for="Destination" class="control-label">Lokasyon</label>
-                @Html.DropDownListFor(x=>x.Destination, (List<SelectListItem>)ViewBag.Data, new{@class = "form-control"})
+                <label asp-for="DestinationID" class="control-label">Lokasyon</label>
+                @Html.DropDownListFor(x=>x.DestinationID, (List<SelectListItem>)ViewBag.Data, new{@class = "form-control"})
             </div>
             <br />
             <div class="form-group">

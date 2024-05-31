@@ -52,7 +52,7 @@ namespace TraversalCoreProject.Areas.Member.Controllers
         [HttpPost]
         public IActionResult NewReservations(Reservation param)
         {
-            param.AppUserId = 5;
+            param.AppUserId = 6;
             //Birden fazla onay durumu olacaktır ama rezervasyon ilk oluşturulduğunda her zaman "Onay Bekliyor" şeklinde açılacağından burada işlemi ataayalım.
             param.Status = "Onay Bekliyor";
             reservationManager.TAdd(param);
